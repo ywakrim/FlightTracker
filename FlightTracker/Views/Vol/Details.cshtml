@@ -1,0 +1,84 @@
+﻿@model FlightTracker.Models.Vol
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var consomation = ViewBag.message;
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vol</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aereport_Dep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aereport_Dep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.coordonneesGPS_Dep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coordonneesGPS_Dep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aereport_Des)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aereport_Des)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.coordonneesGPS_Des)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coordonneesGPS_Des)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consomation_Avion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consomation_Avion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.effort_decolage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.effort_decolage)
+        </dd>
+
+        <dt>
+            Consomation
+        </dt>
+
+        <dd>
+            @consomation
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Revenir à la liste", "Index")
+</p>

@@ -1,0 +1,10 @@
+
+
+
+
+
+id|name|aereport_Dep|coordonneesGPS_Dep|aereport_Des|coordonneesGPS_Des|consomation_Avion|effort_decolage
+1|Vol A| Casablanca| |Paris||6|80
+2|Vol C| Paris CDG| 49.012798;2.55|Casablanca M5|33.36750030517578;-7.589970111846924|6|80
+3|Vol B| Lyon| |Paris||7|55
+4|Vol K| Paris| |Casablanca||7|55

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<FlightTracker.Models.Vol>
+
+@{
+    ViewBag.Title = "Suivi des Vols";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Acceuil</h2>
+
+<p>
+    @Html.ActionLink("Créer un nouveau Vol", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name) 
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.aereport_Dep)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.aereport_Des)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aereport_Dep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aereport_Des)
+        </td>
+        <td>
+            @Html.ActionLink("Modifier", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) 
+        </td>
+    </tr>
+}
+
+</table>
